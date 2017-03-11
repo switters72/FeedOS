@@ -9,9 +9,53 @@ public class User {
     String email;
     String score;
     String token;
-    String email_token;
-    String email_verified;
 
+    public User(String id, String email, String score, String token) {
+        this.id = id;
+        this.email = email;
+        this.score = score;
+        this.token = token;
+    }
 
+    public void setId(String id) {
+        this.id = id;
+    }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setScore(String score) {
+        this.score = score;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getScore() {
+        return score;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id='" + id + '\'' +
+                ", email='" + email + '\'' +
+                ", score='" + score + '\'' +
+                ", token='" + token + '\'' +
+                '}';
+    }
 }
