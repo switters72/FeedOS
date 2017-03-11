@@ -1,5 +1,6 @@
 package appathon.anonu;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -39,9 +40,10 @@ public class HistoryActivity extends AppCompatActivity {
         schoolsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-    //            Intent schoolsIntent = new Intent(HistoryActivity.this, SchoolsActivity.class);
-    //             startActivity(schoolsIntent);
                 finish();
+                Intent schoolsIntent = new Intent(HistoryActivity.this, SchoolsActivity.class);
+                startActivity(schoolsIntent);
+
 
             }
         });
