@@ -1,0 +1,20 @@
+<b>url:</b> <br>https://anonymousuniversity.com/api/set/vote.php?token={token}&resource_type={post/comment}&resource_id={post/comment_id}&vote={vote_amount}<br><br>
+<b>return:</b> <br>
+SUCCESSFUL (EXAMPLE OUTPUT):<br>
+{"successful":true}<br>
+TOKEN MISSING:<br>
+{"successful":false,"error":"no token provided"}<br>
+INVALID TOKEN:<br>
+{"successful":false,"error":"invalid token"}<br>
+INVALID VOTE AMOUNT:<br>
+{"successful":false,"error":"invalid vote value (must be -1, 0, or 1)"}<br>
+INVALID RESOURCE_ID:<br>
+{"successful":false,"error":"resource_id was not valid"}<br>
+INVALID RESOURCE TYPE:<br>
+{"successful":false,"error":"not a valid resource type (must be 'post' or 'comment'"}<br>
+VOTE MISSING:<br>
+{"successful":false,"error":"vote was not provided"}<br>
+RESOURCE_ID MISSING:<br>
+{"successful":false,"error":"resource_id not provided"}<br>
+RESOURCE_TYPE MISSING:<br>
+{"successful":false,"error":"resource_type not provided"}

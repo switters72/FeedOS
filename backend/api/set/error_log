@@ -1,0 +1,59 @@
+[10-Mar-2017 20:56:40 America/New_York] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/anonkhdi/public_html/api/set/users.php on line 9
+[10-Mar-2017 20:57:23 America/New_York] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/anonkhdi/public_html/api/set/users.php on line 11
+[10-Mar-2017 20:59:29 America/New_York] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/anonkhdi/public_html/api/set/users.php on line 12
+[10-Mar-2017 20:59:30 America/New_York] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/anonkhdi/public_html/api/set/users.php on line 12
+[10-Mar-2017 20:59:30 America/New_York] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/anonkhdi/public_html/api/set/users.php on line 12
+[10-Mar-2017 20:59:31 America/New_York] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/anonkhdi/public_html/api/set/users.php on line 12
+[10-Mar-2017 20:59:32 America/New_York] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/anonkhdi/public_html/api/set/users.php on line 12
+[10-Mar-2017 21:00:02 America/New_York] PHP Notice:  Use of undefined constant parts - assumed 'parts' in /home/anonkhdi/public_html/api/set/users.php on line 23
+[10-Mar-2017 21:01:37 America/New_York] PHP Notice:  Use of undefined constant DB_HOST - assumed 'DB_HOST' in /home/anonkhdi/public_html/api/set/users.php on line 55
+[10-Mar-2017 21:01:37 America/New_York] PHP Notice:  Use of undefined constant DB_USER - assumed 'DB_USER' in /home/anonkhdi/public_html/api/set/users.php on line 55
+[10-Mar-2017 21:01:37 America/New_York] PHP Notice:  Use of undefined constant DB_PASS - assumed 'DB_PASS' in /home/anonkhdi/public_html/api/set/users.php on line 55
+[10-Mar-2017 21:01:37 America/New_York] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/anonkhdi/public_html/api/set/users.php on line 55
+[10-Mar-2017 21:01:37 America/New_York] PHP Warning:  mysql_connect(): Unknown MySQL server host 'DB_HOST' (-2) in /home/anonkhdi/public_html/api/set/users.php on line 55
+[10-Mar-2017 21:01:56 America/New_York] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/anonkhdi/public_html/api/set/users.php on line 6
+[10-Mar-2017 21:01:56 America/New_York] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/anonkhdi/public_html/api/set/users.php on line 6
+[10-Mar-2017 21:01:56 America/New_York] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/anonkhdi/public_html/api/set/users.php on line 6
+[10-Mar-2017 21:01:56 America/New_York] PHP Notice:  Use of undefined constant DB_HOST - assumed 'DB_HOST' in /home/anonkhdi/public_html/api/set/users.php on line 57
+[10-Mar-2017 21:01:56 America/New_York] PHP Notice:  Use of undefined constant DB_USER - assumed 'DB_USER' in /home/anonkhdi/public_html/api/set/users.php on line 57
+[10-Mar-2017 21:01:56 America/New_York] PHP Notice:  Use of undefined constant DB_PASS - assumed 'DB_PASS' in /home/anonkhdi/public_html/api/set/users.php on line 57
+[10-Mar-2017 21:01:56 America/New_York] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/anonkhdi/public_html/api/set/users.php on line 57
+[10-Mar-2017 21:01:56 America/New_York] PHP Warning:  mysql_connect(): Unknown MySQL server host 'DB_HOST' (-2) in /home/anonkhdi/public_html/api/set/users.php on line 57
+[10-Mar-2017 21:02:31 America/New_York] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/anonkhdi/public_html/api/set/users.php on line 57
+[10-Mar-2017 21:02:31 America/New_York] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/anonkhdi/public_html/api/set/users.php on line 47
+[10-Mar-2017 21:02:31 America/New_York] PHP Notice:  Undefined variable: token in /home/anonkhdi/public_html/api/set/users.php on line 51
+[10-Mar-2017 21:02:31 America/New_York] PHP Notice:  Column count doesn't match value count at row 1 in /home/anonkhdi/public_html/api/set/users.php on line 51
+[10-Mar-2017 21:02:31 America/New_York] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/anonkhdi/public_html/api/set/users.php on line 83
+[10-Mar-2017 21:04:00 America/New_York] PHP Notice:  Undefined variable: token in /home/anonkhdi/public_html/api/set/users.php on line 51
+[10-Mar-2017 21:04:00 America/New_York] PHP Notice:  Column count doesn't match value count at row 1 in /home/anonkhdi/public_html/api/set/users.php on line 51
+[10-Mar-2017 21:04:00 America/New_York] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/anonkhdi/public_html/api/set/users.php on line 83
+[10-Mar-2017 21:04:35 America/New_York] PHP Notice:  Undefined variable: token in /home/anonkhdi/public_html/api/set/users.php on line 51
+[10-Mar-2017 21:04:35 America/New_York] PHP Notice:  Column count doesn't match value count at row 1 in /home/anonkhdi/public_html/api/set/users.php on line 51
+[11-Mar-2017 02:50:03 America/New_York] PHP Notice:  Undefined index: school_id in /home/anonkhdi/public_html/api/set/comment.php on line 10
+[11-Mar-2017 03:28:49 America/New_York] PHP Notice:  Undefined index: resource_type in /home/anonkhdi/public_html/api/set/vote.php on line 4
+[11-Mar-2017 03:28:49 America/New_York] PHP Notice:  Undefined index: resource_type in /home/anonkhdi/public_html/api/set/vote.php on line 4
+[11-Mar-2017 03:29:29 America/New_York] PHP Notice:  Undefined index: vote in /home/anonkhdi/public_html/api/set/vote.php on line 10
+[11-Mar-2017 03:29:29 America/New_York] PHP Notice:  Undefined index: vote in /home/anonkhdi/public_html/api/set/vote.php on line 10
+[11-Mar-2017 03:29:29 America/New_York] PHP Notice:  Undefined index: vote in /home/anonkhdi/public_html/api/set/vote.php on line 10
+[11-Mar-2017 03:29:35 America/New_York] PHP Warning:  Missing argument 4 for insertNewVote(), called in /home/anonkhdi/public_html/api/set/vote.php on line 19 and defined in /home/anonkhdi/public_html/api/set/vote.php on line 23
+[11-Mar-2017 03:29:35 America/New_York] PHP Notice:  Undefined variable: vote in /home/anonkhdi/public_html/api/set/vote.php on line 28
+[11-Mar-2017 03:29:54 America/New_York] PHP Warning:  Missing argument 4 for modifyExistingVote(), called in /home/anonkhdi/public_html/api/set/vote.php on line 17 and defined in /home/anonkhdi/public_html/api/set/vote.php on line 31
+[11-Mar-2017 03:29:54 America/New_York] PHP Notice:  Undefined variable: voteValue in /home/anonkhdi/public_html/api/set/vote.php on line 36
+[11-Mar-2017 03:29:54 America/New_York] PHP Notice:  Undefined variable: resourveId in /home/anonkhdi/public_html/api/set/vote.php on line 36
+[11-Mar-2017 03:29:54 America/New_York] PHP Notice:  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' `resource_type` = 'post', `resource_id` = ''' at line 1 in /home/anonkhdi/public_html/api/set/vote.php on line 36
+[11-Mar-2017 03:30:00 America/New_York] PHP Warning:  Missing argument 4 for modifyExistingVote(), called in /home/anonkhdi/public_html/api/set/vote.php on line 17 and defined in /home/anonkhdi/public_html/api/set/vote.php on line 31
+[11-Mar-2017 03:30:00 America/New_York] PHP Notice:  Undefined variable: voteValue in /home/anonkhdi/public_html/api/set/vote.php on line 36
+[11-Mar-2017 03:30:00 America/New_York] PHP Notice:  Undefined variable: resourveId in /home/anonkhdi/public_html/api/set/vote.php on line 36
+[11-Mar-2017 03:30:00 America/New_York] PHP Notice:  You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' `resource_type` = 'post', `resource_id` = ''' at line 1 in /home/anonkhdi/public_html/api/set/vote.php on line 36
+[11-Mar-2017 03:35:32 America/New_York] PHP Warning:  Missing argument 4 for modifyExistingVote(), called in /home/anonkhdi/public_html/api/set/vote.php on line 17 and defined in /home/anonkhdi/public_html/api/set/vote.php on line 31
+[11-Mar-2017 03:35:32 America/New_York] PHP Notice:  Undefined variable: voteValue in /home/anonkhdi/public_html/api/set/vote.php on line 36
+[11-Mar-2017 03:35:32 America/New_York] PHP Notice:  Undefined variable: resourveId in /home/anonkhdi/public_html/api/set/vote.php on line 36
+[11-Mar-2017 03:36:01 America/New_York] PHP Warning:  Missing argument 4 for modifyExistingVote(), called in /home/anonkhdi/public_html/api/set/vote.php on line 17 and defined in /home/anonkhdi/public_html/api/set/vote.php on line 31
+[11-Mar-2017 03:36:01 America/New_York] PHP Notice:  Undefined variable: voteValue in /home/anonkhdi/public_html/api/set/vote.php on line 36
+[11-Mar-2017 03:36:01 America/New_York] PHP Notice:  Undefined variable: resourveId in /home/anonkhdi/public_html/api/set/vote.php on line 36
+[11-Mar-2017 03:36:47 America/New_York] PHP Warning:  Missing argument 4 for modifyExistingVote(), called in /home/anonkhdi/public_html/api/set/vote.php on line 17 and defined in /home/anonkhdi/public_html/api/set/vote.php on line 31
+[11-Mar-2017 03:36:47 America/New_York] PHP Notice:  Undefined variable: voteValue in /home/anonkhdi/public_html/api/set/vote.php on line 36
+[11-Mar-2017 03:36:54 America/New_York] PHP Warning:  Missing argument 4 for modifyExistingVote(), called in /home/anonkhdi/public_html/api/set/vote.php on line 17 and defined in /home/anonkhdi/public_html/api/set/vote.php on line 31
+[11-Mar-2017 03:36:54 America/New_York] PHP Notice:  Undefined variable: voteValue in /home/anonkhdi/public_html/api/set/vote.php on line 36
+[11-Mar-2017 03:37:18 America/New_York] PHP Warning:  Missing argument 4 for modifyExistingVote(), called in /home/anonkhdi/public_html/api/set/vote.php on line 17 and defined in /home/anonkhdi/public_html/api/set/vote.php on line 31
+[11-Mar-2017 03:37:18 America/New_York] PHP Notice:  Undefined variable: voteValue in /home/anonkhdi/public_html/api/set/vote.php on line 36
