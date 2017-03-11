@@ -6,13 +6,11 @@ package appathon.anonu;
 
 public class User {
     String id;
-    String email;
-    String score;
+    int score;
     String token;
 
-    public User(String id, String email, String score, String token) {
+    public User(String id, int score, String token) {
         this.id = id;
-        this.email = email;
         this.score = score;
         this.token = token;
     }
@@ -21,11 +19,7 @@ public class User {
         this.id = id;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setScore(String score) {
+    public void setScore(int score) {
         this.score = score;
     }
 
@@ -37,11 +31,7 @@ public class User {
         return id;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public String getScore() {
+    public int getScore() {
         return score;
     }
 
@@ -53,7 +43,6 @@ public class User {
     public String toString() {
         return "User{" +
                 "id='" + id + '\'' +
-                ", email='" + email + '\'' +
                 ", score='" + score + '\'' +
                 ", token='" + token + '\'' +
                 '}';

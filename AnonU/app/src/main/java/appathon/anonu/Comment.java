@@ -10,13 +10,15 @@ public class Comment {
     String owner_id;
     String date_utc;
     String contents;
+    int vote_count;
 
-    public Comment(String id, String post_id, String owner_id, String date_utc, String contents) {
+    public Comment(String id, String post_id, String owner_id, String date_utc, String contents, int vote_count) {
         this.id = id;
         this.post_id = post_id;
         this.owner_id = owner_id;
         this.date_utc = date_utc;
         this.contents = contents;
+        this.vote_count = vote_count;
     }
 
     @Override
@@ -68,5 +70,13 @@ public class Comment {
 
     public String getContents() {
         return contents;
+    }
+
+    public int getVote_count() {
+        return vote_count;
+    }
+
+    public void setVote_count(int vote_count) {
+        this.vote_count = vote_count;
     }
 }

@@ -1,5 +1,6 @@
 package appathon.anonu;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -33,6 +34,10 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void loginClick() {
-        WebServicesController.verifyEmail(this, (String) email.getText());
+        WebServicesController.verifyEmail(this, addEmail.getText().toString());
+        if(WebServicesController.isEmailConfirmation() == true) {
+            Intent homeIntent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(homeIntent);
+        }
     }
 }

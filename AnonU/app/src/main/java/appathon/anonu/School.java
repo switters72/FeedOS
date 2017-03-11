@@ -4,12 +4,12 @@ package appathon.anonu;
  * Created by HomeBuild on 3/10/2017.
  */
 
-public class Schools {
+public class School {
     String id;
     String name;
     String logo_link;
 
-    public Schools(String id, String name, String logo_link) {
+    public School(String id, String name, String logo_link) {
         this.id = id;
         this.name = name;
         this.logo_link = logo_link;
@@ -41,7 +41,7 @@ public class Schools {
 
     @Override
     public String toString() {
-        return "Schools{" +
+        return "School{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", logo_link='" + logo_link + '\'' +
