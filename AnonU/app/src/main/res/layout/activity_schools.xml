@@ -45,6 +45,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/btn7"
+        android:background="@android:color/transparent"
         android:text="Button" />
 
     <Button
@@ -54,16 +55,18 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/btn6"
+        android:background="@android:color/transparent"
         android:text="Button" />
 
     <Button
         android:id="@+id/btn6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button"
-        android:layout_below="@+id/btn5"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btn5"
+        android:background="@android:color/transparent"
+        android:text="Button" />
 
     <Button
         android:id="@+id/btn5"
@@ -72,6 +75,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/btn4"
+        android:background="@android:color/transparent"
         android:text="Button" />
 
     <Button
@@ -81,6 +85,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/btn3"
+        android:background="@android:color/transparent"
         android:text="Button" />
 
     <Button
@@ -90,6 +95,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/btn2"
+        android:background="@android:color/transparent"
         android:text="Button" />
 
     <Button
@@ -99,15 +105,17 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:text="UofI" />
+        android:background="@android:color/transparent"
+        android:text="Button" />
 
     <Button
         android:id="@+id/btn2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button"
-        android:layout_below="@+id/btn1"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btn1"
+        android:background="@android:color/transparent"
+        android:text="Button" />
 
 </RelativeLayout>

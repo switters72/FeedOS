@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
             //    Intent homeIntent = new Intent(MainActivity.this, MainActivity.class);
             //    startActivity(homeIntent);
+                //
                 adapter.notifyDataSetChanged();
 
             }
