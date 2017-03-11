@@ -17,7 +17,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/homeButtonID" />
+        android:id="@+id/homeButtonID"
+        android:backgroundTint="@android:color/darker_gray" />
 
     <Button
         android:text="History"
@@ -37,15 +38,6 @@
         android:layout_alignParentEnd="true"
         android:elevation="0dp" />
 
-    <TextView
-        android:text="What's good??"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/TitleID"
-        android:textSize="30sp" />
-
     <Button
         android:text="Post!"
         android:layout_width="wrap_content"
@@ -56,15 +48,36 @@
         android:layout_alignParentEnd="true"
         android:layout_alignBottom="@+id/NewPostID" />
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listViewID"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/UserNewPostID"
+        android:divider="@android:drawable/bottom_bar"
+        android:dividerHeight="4dp"
+        android:layout_above="@+id/homeButtonID" />
+
+    <TextView
+        android:text="What's good??"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TitleID"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
+        android:layout_marginTop="19dp"
+        android:id="@+id/UserNewPostID"
         android:layout_below="@+id/PostButtonID"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="19dp"
-        android:id="@+id/UserNewPostID" />
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

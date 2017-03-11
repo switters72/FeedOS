@@ -11,21 +11,13 @@
     tools:context="appathon.anonu.HistoryActivity">
 
     <Button
-        android:text="Home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/homeButtonID" />
-
-    <Button
         android:text="History"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/homeButtonID"
         android:layout_centerHorizontal="true"
-        android:id="@+id/HistoryButtonID" />
+        android:id="@+id/HistoryButtonID"
+        android:backgroundTint="@android:color/darker_gray" />
 
     <Button
         android:text="Schools"
@@ -49,5 +41,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" />
     </ScrollView>
+
+    <Button
+        android:text="Home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/homeButtonID"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

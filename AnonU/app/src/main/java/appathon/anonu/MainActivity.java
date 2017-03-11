@@ -4,10 +4,17 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    private ListView listView;
+    private ArrayAdapter<String> adapter;
+    private ArrayList<String> arrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +52,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(schoolsIntent);
             }
         });
+
+        listView = (ListView) findViewById(R.id.listViewID);
+        arrayList = new ArrayList<String>();
+        arrayList.add("First Post! Hi mom! I'm so alone.");
+        arrayList.add("TGIF!");
+        arrayList.add("B1G1 Chick-fil-A in the SUB!! GO GET EM!");
+        arrayList.add("So ready for spring break.");
+        arrayList.add("Testing 1 2 3.");
+        arrayList.add("asfjlkajsdfkl.");
+        arrayList.add("I LOVE LAMP.");
+
+        adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, arrayList);
+        listView.setAdapter(adapter);
 
 
     }

@@ -35,7 +35,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:elevation="0dp" />
+        android:elevation="0dp"
+        android:backgroundTint="@android:color/darker_gray" />
 
     <ScrollView
         android:layout_width="match_parent"
