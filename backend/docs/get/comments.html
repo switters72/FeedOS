@@ -1,0 +1,10 @@
+<b>url:</b> <br>https://anonymousuniversity.com/api/get/comments.php?token={comments}&post_id={post_id}<br><br>
+<b>return:</b> <br>
+SUCCESSFUL (EXAMPLE OUTPUT):<br>
+{"successful":true,"comments":[{"id":"1","post_id":"1","date_utc":"123123123","contents":"This is a sample comment.","vote_count":0}]}<br>
+TOKEN MISSING:<br>
+{"successful":false,"error":"no token provided"}<br>
+INVALID TOKEN:<br>
+{"successful":false,"error":"invalid token"}<br>
+POST_ID MISSING:<br>
+{"successful":false,"error":"post_id not provided"}<br>

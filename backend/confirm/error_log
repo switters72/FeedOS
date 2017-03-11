@@ -1,0 +1,50 @@
+[10-Mar-2017 21:18:12 America/New_York] PHP Notice:  Undefined index: code in /home/anonkhdi/public_html/confirm/index.php on line 2
+[10-Mar-2017 21:29:39 America/New_York] PHP Warning:  include(../config.php): failed to open stream: No such file or directory in /home/anonkhdi/public_html/confirm/index.php on line 2
+[10-Mar-2017 21:29:39 America/New_York] PHP Warning:  include(../config.php): failed to open stream: No such file or directory in /home/anonkhdi/public_html/confirm/index.php on line 2
+[10-Mar-2017 21:29:39 America/New_York] PHP Warning:  include(): Failed opening '../config.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/anonkhdi/public_html/confirm/index.php on line 2
+[10-Mar-2017 21:29:39 America/New_York] PHP Notice:  Use of undefined constant DB_HOST - assumed 'DB_HOST' in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:29:39 America/New_York] PHP Notice:  Use of undefined constant DB_USER - assumed 'DB_USER' in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:29:39 America/New_York] PHP Notice:  Use of undefined constant DB_PASS - assumed 'DB_PASS' in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:29:39 America/New_York] PHP Warning:  mysql_connect(): Unknown MySQL server host 'DB_HOST' (-2) in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:35:13 America/New_York] PHP Warning:  include(../config.php): failed to open stream: No such file or directory in /home/anonkhdi/public_html/confirm/index.php on line 2
+[10-Mar-2017 21:35:13 America/New_York] PHP Warning:  include(../config.php): failed to open stream: No such file or directory in /home/anonkhdi/public_html/confirm/index.php on line 2
+[10-Mar-2017 21:35:13 America/New_York] PHP Warning:  include(): Failed opening '../config.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/anonkhdi/public_html/confirm/index.php on line 2
+[10-Mar-2017 21:35:13 America/New_York] PHP Notice:  Use of undefined constant DB_HOST - assumed 'DB_HOST' in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:35:13 America/New_York] PHP Notice:  Use of undefined constant DB_USER - assumed 'DB_USER' in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:35:13 America/New_York] PHP Notice:  Use of undefined constant DB_PASS - assumed 'DB_PASS' in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:35:13 America/New_York] PHP Warning:  mysql_connect(): Unknown MySQL server host 'DB_HOST' (-2) in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:36:05 America/New_York] PHP Warning:  include(../../config.php): failed to open stream: No such file or directory in /home/anonkhdi/public_html/confirm/index.php on line 2
+[10-Mar-2017 21:36:05 America/New_York] PHP Warning:  include(../../config.php): failed to open stream: No such file or directory in /home/anonkhdi/public_html/confirm/index.php on line 2
+[10-Mar-2017 21:36:05 America/New_York] PHP Warning:  include(): Failed opening '../../config.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/anonkhdi/public_html/confirm/index.php on line 2
+[10-Mar-2017 21:36:05 America/New_York] PHP Notice:  Use of undefined constant DB_HOST - assumed 'DB_HOST' in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:36:05 America/New_York] PHP Notice:  Use of undefined constant DB_USER - assumed 'DB_USER' in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:36:05 America/New_York] PHP Notice:  Use of undefined constant DB_PASS - assumed 'DB_PASS' in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:36:05 America/New_York] PHP Warning:  mysql_connect(): Unknown MySQL server host 'DB_HOST' (-2) in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:36:06 America/New_York] PHP Warning:  include(../../config.php): failed to open stream: No such file or directory in /home/anonkhdi/public_html/confirm/index.php on line 2
+[10-Mar-2017 21:36:06 America/New_York] PHP Warning:  include(../../config.php): failed to open stream: No such file or directory in /home/anonkhdi/public_html/confirm/index.php on line 2
+[10-Mar-2017 21:36:06 America/New_York] PHP Warning:  include(): Failed opening '../../config.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/anonkhdi/public_html/confirm/index.php on line 2
+[10-Mar-2017 21:36:06 America/New_York] PHP Notice:  Use of undefined constant DB_HOST - assumed 'DB_HOST' in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:36:06 America/New_York] PHP Notice:  Use of undefined constant DB_USER - assumed 'DB_USER' in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:36:06 America/New_York] PHP Notice:  Use of undefined constant DB_PASS - assumed 'DB_PASS' in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:36:06 America/New_York] PHP Warning:  mysql_connect(): Unknown MySQL server host 'DB_HOST' (-2) in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:36:11 America/New_York] PHP Warning:  include(../../config.php): failed to open stream: No such file or directory in /home/anonkhdi/public_html/confirm/index.php on line 2
+[10-Mar-2017 21:36:11 America/New_York] PHP Warning:  include(../../config.php): failed to open stream: No such file or directory in /home/anonkhdi/public_html/confirm/index.php on line 2
+[10-Mar-2017 21:36:11 America/New_York] PHP Warning:  include(): Failed opening '../../config.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/anonkhdi/public_html/confirm/index.php on line 2
+[10-Mar-2017 21:36:11 America/New_York] PHP Notice:  Use of undefined constant DB_HOST - assumed 'DB_HOST' in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:36:11 America/New_York] PHP Notice:  Use of undefined constant DB_USER - assumed 'DB_USER' in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:36:11 America/New_York] PHP Notice:  Use of undefined constant DB_PASS - assumed 'DB_PASS' in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:36:11 America/New_York] PHP Warning:  mysql_connect(): Unknown MySQL server host 'DB_HOST' (-2) in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:38:04 America/New_York] PHP Warning:  include(../config.php): failed to open stream: No such file or directory in /home/anonkhdi/public_html/confirm/index.php on line 2
+[10-Mar-2017 21:38:04 America/New_York] PHP Warning:  include(../config.php): failed to open stream: No such file or directory in /home/anonkhdi/public_html/confirm/index.php on line 2
+[10-Mar-2017 21:38:04 America/New_York] PHP Warning:  include(): Failed opening '../config.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/anonkhdi/public_html/confirm/index.php on line 2
+[10-Mar-2017 21:38:04 America/New_York] PHP Notice:  Use of undefined constant DB_HOST - assumed 'DB_HOST' in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:38:04 America/New_York] PHP Notice:  Use of undefined constant DB_USER - assumed 'DB_USER' in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:38:04 America/New_York] PHP Notice:  Use of undefined constant DB_PASS - assumed 'DB_PASS' in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:38:04 America/New_York] PHP Warning:  mysql_connect(): Unknown MySQL server host 'DB_HOST' (-2) in /home/anonkhdi/public_html/confirm/index.php on line 22
+[10-Mar-2017 21:38:48 America/New_York] PHP Notice:  Unknown column '7l6zm3jtny' in 'where clause' in /home/anonkhdi/public_html/confirm/index.php on line 18
+[10-Mar-2017 21:38:50 America/New_York] PHP Notice:  Unknown column '7l6zm3jtny' in 'where clause' in /home/anonkhdi/public_html/confirm/index.php on line 18
+[10-Mar-2017 21:39:37 America/New_York] PHP Notice:  Unknown column '7l6zm3jtny' in 'where clause' in /home/anonkhdi/public_html/confirm/index.php on line 18
+[10-Mar-2017 22:30:53 America/New_York] PHP Notice:  Undefined offset: -1 in /home/anonkhdi/public_html/confirm/index.php on line 43
+[10-Mar-2017 22:31:34 America/New_York] PHP Notice:  Undefined offset: 1 in /home/anonkhdi/public_html/confirm/index.php on line 48
+[10-Mar-2017 22:33:00 America/New_York] PHP Notice:  Undefined offset: -1 in /home/anonkhdi/public_html/confirm/index.php on line 43
+[10-Mar-2017 22:33:41 America/New_York] PHP Notice:  Undefined offset: -1 in /home/anonkhdi/public_html/confirm/index.php on line 43
