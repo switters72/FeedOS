@@ -72,6 +72,7 @@ public class LoginActivity extends AppCompatActivity {
                             if(emailConfirmation == true) {
                                 Log.d("BA", "inside check is true");
                                 Intent homeIntent = new Intent(LoginActivity.this, MainActivity.class);
+                                homeIntent.putExtra("confirmation_token", confirmationToken);
                                 startActivity(homeIntent);
                             }
                             Log.d("BA", "HERE");
