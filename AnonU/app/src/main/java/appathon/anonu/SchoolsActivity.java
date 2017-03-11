@@ -6,7 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.ArrayList;
+
 public class SchoolsActivity extends AppCompatActivity {
+    ArrayList<Button> buttonList  = new ArrayList<Button>();
 
 
     @Override
@@ -22,8 +25,9 @@ public class SchoolsActivity extends AppCompatActivity {
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent homeIntent = new Intent(SchoolsActivity.this, MainActivity.class);
-                startActivity(homeIntent);
+//                Intent homeIntent = new Intent(SchoolsActivity.this, MainActivity.class);
+//                startActivity(homeIntent);
+                finish();
             }
         });
 
@@ -31,6 +35,7 @@ public class SchoolsActivity extends AppCompatActivity {
         historyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                finish();
                 Intent historyIntent = new Intent(SchoolsActivity.this, HistoryActivity.class);
                 startActivity(historyIntent);
             }
@@ -40,9 +45,29 @@ public class SchoolsActivity extends AppCompatActivity {
         schoolsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent schoolsIntent = new Intent(SchoolsActivity.this, SchoolsActivity.class);
-                startActivity(schoolsIntent);
+//                Intent schoolsIntent = new Intent(SchoolsActivity.this, SchoolsActivity.class);
+//                startActivity(schoolsIntent);
             }
         });
+
+        buttonList.add((Button)findViewById(R.id.btn1));
+        buttonList.add((Button)findViewById(R.id.btn2));
+        buttonList.add((Button)findViewById(R.id.btn3));
+        buttonList.add((Button)findViewById(R.id.btn4));
+        buttonList.add((Button)findViewById(R.id.btn5));
+        buttonList.add((Button)findViewById(R.id.btn6));
+
+        for (int i = 0; i < buttonList.size(); i++) {
+            final int current = i;
+
+            buttonList.get(i).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+//                    buttonList.get(movCnt).setBackgroundResource(R.drawable.mov1n);
+//                    buttonList.get(current).setBackgroundResource(R.drawable.mov1o);
+//                    movCnt = current;
+                }
+            });
+        }
     }
 }

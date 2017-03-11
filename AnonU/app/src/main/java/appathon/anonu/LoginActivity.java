@@ -35,9 +35,9 @@ public class LoginActivity extends AppCompatActivity {
 
     private void loginClick() {
         WebServicesController.verifyEmail(this, addEmail.getText().toString());
-        if(WebServicesController.isEmailConfirmation() == true) {
+       // if(WebServicesController.isEmailConfirmation() == true) {
             Intent homeIntent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(homeIntent);
-        }
+      //  }
     }
 }

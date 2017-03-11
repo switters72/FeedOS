@@ -21,8 +21,9 @@ public class HistoryActivity extends AppCompatActivity {
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent homeIntent = new Intent(HistoryActivity.this, MainActivity.class);
-                startActivity(homeIntent);
+//                Intent homeIntent = new Intent(HistoryActivity.this, MainActivity.class);
+//                startActivity(homeIntent);
+                finish();
             }
         });
 
@@ -30,8 +31,8 @@ public class HistoryActivity extends AppCompatActivity {
         historyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent historyIntent = new Intent(HistoryActivity.this, HistoryActivity.class);
-                startActivity(historyIntent);
+//                Intent historyIntent = new Intent(HistoryActivity.this, HistoryActivity.class);
+//                startActivity(historyIntent);
             }
         });
 
@@ -41,8 +42,13 @@ public class HistoryActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent schoolsIntent = new Intent(HistoryActivity.this, SchoolsActivity.class);
                 startActivity(schoolsIntent);
+                finish();
+
             }
         });
+        //VIEW MY POST BUTTON
+        //DELETE POST BUTTON INSIDE
+        //SCROLL LAYOUT WITH COMMMENTS
 
     }
 
