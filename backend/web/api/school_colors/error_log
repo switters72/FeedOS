@@ -1,0 +1,2 @@
+[11-Mar-2017 21:12:49 America/New_York] PHP Parse error:  syntax error, unexpected 'exit' (T_EXIT) in /home/anonkhdi/public_html/api/school_colors/fetch.php on line 22
+[11-Mar-2017 21:13:19 America/New_York] PHP Warning:  preg_match_all(): No ending delimiter '/' found in /home/anonkhdi/public_html/api/school_colors/fetch.php on line 21

@@ -15,12 +15,74 @@ if(userExists($_GET['email']))
 	exit(json_encode(array('successful' => false, 'error' => "email already exists")));
 
 $email = $_GET['email'];
+$school = parseSchool($_GET['email']);
+
 $tokens = insertUser($email);
 $token = $tokens["token"];
 $emailToken = $tokens['email_token'];
 sendConfirmationEmail($email, $emailToken);
 $user = getUser($token);
-exit(json_encode(array('successful' => true, "id" => $user["id"], 'token' => $token, "score" => $user["score"])));
+if(!schoolExists($school)) {
+	insertSchool($school);
+	$schoolId = getSchoolId($school);
+	insertPost(0, $schoolId, "AnonU has landed at ".$school."!");
+}
+$schoolId = getSchoolId($school); 
+exit(json_encode(array('successful' => true, "id" => $user["id"], 'token' => $token, "score" => $user["score"], "school" => $school, "home_school_id" => $schoolId)));
+
+function insertPost($userid, $schoolId, $contents) {
+	mysql_connect(DB_HOST, DB_USER, DB_PASS) or
+		die("Could not connect: " . mysql_error());
+	mysql_select_db(DB_NAME);
+	
+	$result = mysql_query("INSERT INTO `anonkhdi_core`.`posts` (`id`, `owner_id`, `school_id`, `date_utc`, `contents`) VALUES (NULL, '".$userid."', '".$schoolId."', '".time()."', '".mysql_real_escape_string($contents)."');") or trigger_error(mysql_error());
+}
+
+function getSchoolId($school) {
+	mysql_connect(DB_HOST, DB_USER, DB_PASS) or
+		die("Could not connect: " . mysql_error());
+	mysql_select_db(DB_NAME);
+
+	$result = mysql_query("SELECT * FROM `schools`") or trigger_error(mysql_error());
+	while ($row = mysql_fetch_array($result)) {
+		if($school == $row['name'])
+			return $row['id'];
+	}
+}
+
+function insertSchool($school) {
+	mysql_connect(DB_HOST, DB_USER, DB_PASS) or
+		die("Could not connect: " . mysql_error());
+	mysql_select_db(DB_NAME);
+
+	$result = mysql_query("INSERT INTO `anonkhdi_core`.`schools` (`id`, `name`, `logo_link`) VALUES (NULL, '".$school."', '');") or trigger_error(mysql_error());
+}
+
+function schoolExists($school) {
+	mysql_connect(DB_HOST, DB_USER, DB_PASS) or
+		die("Could not connect: " . mysql_error());
+	mysql_select_db(DB_NAME);
+
+	$result = mysql_query("SELECT * FROM `schools`") or trigger_error(mysql_error());
+	while ($row = mysql_fetch_array($result)) {
+		if(strtolower($school) == strtolower($row['name']))
+			return true;
+	}
+	return false;
+}
+
+function parseSchool($email) {
+	//colejelinek@u.boisestate.edu
+	//postdoc@grad.ucla.edu
+	//student@school.edu
+	$parts = explode(".", $email);
+	$school = $parts[count($parts) - 2];
+	if (strpos($school, '@') !== false) {
+		$parts = explode("@", $school);
+		$school = $parts[1];
+	}
+	return strtolower($school);
+}
 
 function validEmail($email) {
 	if (strpos($email, '.') !== false) {

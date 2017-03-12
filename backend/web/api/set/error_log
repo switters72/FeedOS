@@ -57,3 +57,13 @@
 [11-Mar-2017 03:36:54 America/New_York] PHP Notice:  Undefined variable: voteValue in /home/anonkhdi/public_html/api/set/vote.php on line 36
 [11-Mar-2017 03:37:18 America/New_York] PHP Warning:  Missing argument 4 for modifyExistingVote(), called in /home/anonkhdi/public_html/api/set/vote.php on line 17 and defined in /home/anonkhdi/public_html/api/set/vote.php on line 31
 [11-Mar-2017 03:37:18 America/New_York] PHP Notice:  Undefined variable: voteValue in /home/anonkhdi/public_html/api/set/vote.php on line 36
+[12-Mar-2017 00:09:50 America/New_York] PHP Notice:  Undefined index: school in /home/anonkhdi/public_html/api/set/users.php on line 49
+[12-Mar-2017 00:09:50 America/New_York] PHP Notice:  Undefined index: school in /home/anonkhdi/public_html/api/set/users.php on line 49
+[12-Mar-2017 00:09:50 America/New_York] PHP Notice:  Undefined index: school in /home/anonkhdi/public_html/api/set/users.php on line 49
+[12-Mar-2017 00:09:50 America/New_York] PHP Notice:  Undefined index: school in /home/anonkhdi/public_html/api/set/users.php on line 49
+[12-Mar-2017 00:09:50 America/New_York] PHP Notice:  Undefined index: school in /home/anonkhdi/public_html/api/set/users.php on line 49
+[12-Mar-2017 00:09:50 America/New_York] PHP Notice:  Undefined index: school in /home/anonkhdi/public_html/api/set/users.php on line 49
+[12-Mar-2017 00:09:50 America/New_York] PHP Notice:  Undefined index: school in /home/anonkhdi/public_html/api/set/users.php on line 49
+[12-Mar-2017 00:09:50 America/New_York] PHP Notice:  Undefined index: school in /home/anonkhdi/public_html/api/set/users.php on line 49
+[12-Mar-2017 00:09:50 America/New_York] PHP Notice:  Undefined index: school in /home/anonkhdi/public_html/api/set/users.php on line 49
+[12-Mar-2017 00:09:50 America/New_York] PHP Notice:  Undefined index: school in /home/anonkhdi/public_html/api/set/users.php on line 49

@@ -40,7 +40,7 @@ function getPosts($schoolId) {
 	$result = mysql_query("SELECT * FROM `posts`") or trigger_error(mysql_error());
 	while ($row = mysql_fetch_array($result)) {
 		if($schoolId == $row['school_id'])
-			array_push($posts, array('id' => $row['id'], 'owner_id' => $row['owner_id'], 'school_id' => $row['school_id'], 'date_utc' => $row['date_utc'], 'contents' => $row['contents'], 'comment_count' => "0"));
+			array_push($posts, array('id' => $row['id'], 'owner_id' => $row['owner_id'], 'school_id' => $row['school_id'], 'date_utc' => $row['date_utc'], 'contents' => $row['contents'], 'comment_count' => 0, 'vote_count' => 0));
 	}
 	return $posts;
 	
