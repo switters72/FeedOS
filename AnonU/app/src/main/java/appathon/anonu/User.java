@@ -8,11 +8,13 @@ public class User {
     String id;
     int score;
     String token;
+    String school;
 
-    public User(String id, int score, String token) {
+    public User(String id, int score, String token, String school) {
         this.id = id;
         this.score = score;
         this.token = token;
+        this.school = school;
     }
 
     public void setId(String id) {

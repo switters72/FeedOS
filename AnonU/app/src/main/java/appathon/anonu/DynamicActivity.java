@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -43,6 +44,8 @@ public class DynamicActivity extends AppCompatActivity {
         private static String parsedContent;
         private static String parsedSchoolID;
         private static String passedSchoolID;
+        private static String passedSchoolName;
+       private static TextView title;
 
 
         @Override
@@ -53,7 +56,10 @@ public class DynamicActivity extends AppCompatActivity {
             Bundle extras = getIntent().getExtras();
             confirmationToken = extras.getString("dynamic_confirmation_token");
             passedSchoolID =  extras.getString("dynamic_school_id");
+            passedSchoolName = extras.getString("dynamic_school_name");
             EventBus.getDefault().register(this);
+
+
 
 
             final Button homeButton = (Button)findViewById(R.id.homeButtonID);
@@ -62,7 +68,8 @@ public class DynamicActivity extends AppCompatActivity {
             Button postButton = (Button)findViewById(R.id.PostButtonID);
             inputUserPost = (EditText)findViewById(R.id.UserNewPostID);
             listView = (ListView) findViewById(R.id.listViewID);
-
+            title = (TextView) findViewById(R.id.textViewID);
+            title.setText(passedSchoolName);
 
             arrayList = new ArrayList<String>();
             loadPosts(this);
@@ -134,6 +141,12 @@ public class DynamicActivity extends AppCompatActivity {
 
 
         }
+
+    public static String checkNameLength(String name) {
+        if(name.length() > 15)
+            name = name.substring(0, 15)+"...";
+        return name;
+    }
 
     public static void loadPosts(Context context){
         if( queue == null){

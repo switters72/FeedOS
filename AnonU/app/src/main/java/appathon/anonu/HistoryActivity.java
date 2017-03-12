@@ -61,6 +61,8 @@ public class HistoryActivity extends AppCompatActivity {
 //                Intent homeIntent = new Intent(HistoryActivity.this, MainActivity.class);
 //                startActivity(homeIntent);
                 finish();
+                //NOTE finish will just kill this app and load the old home page up (possibility of old home page that is not updated with new post.)
+
             }
         });
 
@@ -70,7 +72,7 @@ public class HistoryActivity extends AppCompatActivity {
             public void onClick(View v) {
 //                Intent historyIntent = new Intent(HistoryActivity.this, HistoryActivity.class);
 //                startActivity(historyIntent);
-                adapter.notifyDataSetChanged();
+               adapter.notifyDataSetChanged();
             }
         });
 
@@ -78,9 +80,9 @@ public class HistoryActivity extends AppCompatActivity {
         schoolsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
-                Intent schoolsIntent = new Intent(HistoryActivity.this, SchoolsActivity.class);
-                startActivity(schoolsIntent);
+//                finish();
+//                Intent schoolsIntent = new Intent(HistoryActivity.this, SchoolsActivity.class);
+//                startActivity(schoolsIntent);
 
 
             }

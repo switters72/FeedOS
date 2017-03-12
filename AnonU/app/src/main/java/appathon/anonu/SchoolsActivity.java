@@ -30,6 +30,7 @@ public class SchoolsActivity extends AppCompatActivity {
     private static RequestQueue queue = null;
     private static String confirmationToken;
     private static String passedSchoolID;
+    private static String passedSchoolName;
     private Button b1;
     private Button b2;
     private Button b3;
@@ -48,6 +49,7 @@ public class SchoolsActivity extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         confirmationToken = (String) extras.get("confirmation_token");
+
         EventBus.getDefault().register(this);
 
 
@@ -73,8 +75,8 @@ public class SchoolsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
               //  finish();
-                Intent historyIntent = new Intent(SchoolsActivity.this, HistoryActivity.class);
-                startActivity(historyIntent);
+//                Intent historyIntent = new Intent(SchoolsActivity.this, HistoryActivity.class);
+//                startActivity(historyIntent);
             }
         });
 
@@ -165,6 +167,10 @@ public class SchoolsActivity extends AppCompatActivity {
                                             passedSchoolID = schools.get(i).getId();
                                             dynamic.putExtra("dynamic_confirmation_token", confirmationToken);
                                             dynamic.putExtra("dynamic_school_id", passedSchoolID);
+//                                            dynamic.putExtra("dynamic_school_name", schools.get(i).getName());
+                                            passedSchoolName = schools.get(i).getName();
+                                            dynamic.putExtra("dynamic_school_name", passedSchoolName);
+
                                         }
                                     }
                                     //Intent dynamic = new Intent(SchoolsActivity.this, DynamicActivity.class);

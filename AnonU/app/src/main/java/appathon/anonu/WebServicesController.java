@@ -24,6 +24,7 @@ public class WebServicesController {
 
     private static RequestQueue queue = null;
     private static String confirmationToken;
+    private static String passedSchoolName;
     private static boolean emailConfirmation = false;
     private static String parsedPostID;
     private static User user;
@@ -175,8 +176,9 @@ public class WebServicesController {
                                 emailConfirmation = successfulJSONObject.getBoolean("successful");
                                 String parsedID = successfulJSONObject.getString("id");
                                 confirmationToken = successfulJSONObject.getString("token");
+
                                 int parsedScore = successfulJSONObject.getInt("score");
-                                user = new User(parsedID, parsedScore, confirmationToken);
+                                user = new User(parsedID, parsedScore, confirmationToken,jsonObject.getString("school"));
                             }
                             Log.d("BA", "HERE");
                         } catch (JSONException e) {

@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -42,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
     private static String parsedPostID;
     private static String parsedContent;
     private static String parsedSchoolID;
+    private static TextView title;
+    private static String passedSchoolName;
+    private static String schoolName;
+
 
 
     @Override
@@ -51,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         confirmationToken = (String) extras.get("confirmation_token");
+        schoolName = (String)extras.get("school");
+        passedSchoolName = extras.getString("dynamic_school_name");
+
         EventBus.getDefault().register(this);
 
 
@@ -60,7 +68,10 @@ public class MainActivity extends AppCompatActivity {
         Button postButton = (Button)findViewById(R.id.PostButtonID);
         inputUserPost = (EditText)findViewById(R.id.UserNewPostID);
         listView = (ListView) findViewById(R.id.listViewID);
-
+        passedSchoolName = extras.getString("dynamic_school_name");
+        schoolName = (String)extras.get("school");
+        title = (TextView)findViewById(R.id.textViewID);
+        title.setText(schoolName);
 
         arrayList = new ArrayList<String>();
         loadPosts(this);

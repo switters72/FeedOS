@@ -68,11 +68,13 @@ public class LoginActivity extends AppCompatActivity {
                             String parsedID = jsonObject.getString("id");
                             confirmationToken = jsonObject.getString("token");
                             int parsedScore = jsonObject.getInt("score");
-                            user = new User(parsedID, parsedScore, confirmationToken);
+                            user = new User(parsedID, parsedScore, confirmationToken, jsonObject.getString("school"));
                             if(emailConfirmation == true) {
                                 Log.d("BA", "inside check is true");
                                 Intent homeIntent = new Intent(LoginActivity.this, MainActivity.class);
+//                                homeIntent.putExtra("confirmation_token", confirmationToken);
                                 homeIntent.putExtra("confirmation_token", confirmationToken);
+                                homeIntent.putExtra("school",jsonObject.getString("school"));
                                 startActivity(homeIntent);
                                 finish();
                             }
