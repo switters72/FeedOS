@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         inputUserPost = (EditText)findViewById(R.id.UserNewPostID);
         listView = (ListView) findViewById(R.id.listViewID);
 
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
         arrayList = new ArrayList<String>();
         loadPosts(this);
