@@ -2,8 +2,8 @@ package appathon.anonu;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -31,113 +31,115 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class DynamicActivity extends AppCompatActivity {
 
-    private static RequestQueue queue = null;
-    private ListView listView;
-    private ArrayAdapter<String> adapter;
-    private ArrayList<String> arrayList;
-    private static EditText inputUserPost;
-    private static String confirmationToken;
-    private static String parsedPostID;
-    private static String parsedContent;
-    private static String parsedSchoolID;
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        Bundle extras = getIntent().getExtras();
-        confirmationToken = (String) extras.get("confirmation_token");
-        EventBus.getDefault().register(this);
+        private static RequestQueue queue = null;
+        private ListView listView;
+        private ArrayAdapter<String> adapter;
+        private ArrayList<String> arrayList;
+        private static EditText inputUserPost;
+        private static String confirmationToken;
+       // private static String parsedPostID;
+        private static String parsedContent;
+        private static String parsedSchoolID;
+        private static String passedSchoolID;
 
 
-        final Button homeButton = (Button)findViewById(R.id.homeButtonID);
-        Button historyButton = (Button)findViewById(R.id.HistoryButtonID);
-        Button schoolsButton = (Button)findViewById(R.id.SchoolsID);
-        Button postButton = (Button)findViewById(R.id.PostButtonID);
-        inputUserPost = (EditText)findViewById(R.id.UserNewPostID);
-        listView = (ListView) findViewById(R.id.listViewID);
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+
+            Bundle extras = getIntent().getExtras();
+            confirmationToken = extras.getString("dynamic_confirmation_token");
+            passedSchoolID =  extras.getString("dynamic_school_id");
+            EventBus.getDefault().register(this);
 
 
-        arrayList = new ArrayList<String>();
-        loadPosts(this);
+            final Button homeButton = (Button)findViewById(R.id.homeButtonID);
+            Button historyButton = (Button)findViewById(R.id.HistoryButtonID);
+            Button schoolsButton = (Button)findViewById(R.id.SchoolsID);
+            Button postButton = (Button)findViewById(R.id.PostButtonID);
+            inputUserPost = (EditText)findViewById(R.id.UserNewPostID);
+            listView = (ListView) findViewById(R.id.listViewID);
 
-        //WHEN CLICKING HOME BUTTON (AT HOME SCREEN)
-        homeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            //    Intent homeIntent = new Intent(MainActivity.this, MainActivity.class);
-            //    startActivity(homeIntent);
-                //
-                adapter.notifyDataSetChanged();
 
-            }
-        });
+            arrayList = new ArrayList<String>();
+            loadPosts(this);
 
-        //WHEN CLICKING HISTORY BUTTON
-        historyButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent historyIntent = new Intent(MainActivity.this, HistoryActivity.class);
-                historyIntent.putExtra("confirmation_token", confirmationToken);
-                startActivity(historyIntent);
-            }
-        });
-
-        //WHEN CLICKING SCHOOLS BUTTON
-        schoolsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent schoolsIntent = new Intent(MainActivity.this, SchoolsActivity.class);
-                schoolsIntent.putExtra("confirmation_token", confirmationToken);
-                startActivity(schoolsIntent);
-            }
-        });
-
-        //WHEN CLICKING POST BUTTON
-        postButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (inputUserPost.getText().toString().length() != 0) {
-                    arrayList.add(0, inputUserPost.getText().toString());
-                    //  adapter.add(inputUserPost.getText().toString());
+            //WHEN CLICKING HOME BUTTON (AT HOME SCREEN)
+            homeButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //    Intent homeIntent = new Intent(MainActivity.this, MainActivity.class);
+                    //    startActivity(homeIntent);
+                    //
                     adapter.notifyDataSetChanged();
-                    try {
-                        postClick();
-                    } catch (UnsupportedEncodingException e) {
-                        e.printStackTrace();
+
+                }
+            });
+
+            //WHEN CLICKING HISTORY BUTTON
+            historyButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent historyIntent = new Intent(DynamicActivity.this, HistoryActivity.class);
+                    historyIntent.putExtra("confirmation_token", confirmationToken);
+                    startActivity(historyIntent);
+                }
+            });
+
+            //WHEN CLICKING SCHOOLS BUTTON
+            schoolsButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent schoolsIntent = new Intent(DynamicActivity.this, SchoolsActivity.class);
+                    schoolsIntent.putExtra("confirmation_token", confirmationToken);
+                    startActivity(schoolsIntent);
+                }
+            });
+
+            //WHEN CLICKING POST BUTTON
+            postButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (inputUserPost.getText().toString().length() != 0) {
+                        arrayList.add(0, inputUserPost.getText().toString());
+                        //  adapter.add(inputUserPost.getText().toString());
+                        adapter.notifyDataSetChanged();
+                        try {
+                            postClick();
+                        } catch (UnsupportedEncodingException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
-            }
 
-        });
+            });
 
-        //WHEN CLICKING ON A POST
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-                Toast.makeText(getApplicationContext(),
-                        "Click ListItem Number " + position, Toast.LENGTH_LONG)
-                        .show();
+            //WHEN CLICKING ON A POST
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view,
+                                        int position, long id) {
+                    Toast.makeText(getApplicationContext(),
+                            "Click ListItem Number " + position, Toast.LENGTH_LONG)
+                            .show();
 
-            }
-        });
+                }
+            });
 
-        adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, arrayList);
-        listView.setAdapter(adapter);
+            adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, arrayList);
+            listView.setAdapter(adapter);
 
 
-    }
+        }
 
     public static void loadPosts(Context context){
         if( queue == null){
             queue = Volley.newRequestQueue(context);
         }
-        String url ="https://anonymousuniversity.com/api/get/home_posts.php?token=" + confirmationToken;
+        String url ="https://anonymousuniversity.com/api/get/other_posts.php?token=" + confirmationToken+ "&school_id=" + passedSchoolID;
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
@@ -151,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
                             JSONArray jsonArray =  successjsonObject.getJSONArray("posts");
                             for(int index = 0; index < jsonArray.length(); index++) {
                                 JSONObject jsonObject = jsonArray.getJSONObject(index);
-                                parsedPostID = jsonObject.getString("id");
+                                String parsedPostID = jsonObject.getString("id");
                                 String parsedOwnerID = jsonObject.getString("owner_id");
                                 parsedSchoolID = jsonObject.getString("school_id");
                                 String parsedDateUtc = jsonObject.getString("date_utc");
@@ -199,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         queue.add(stringRequest);
-     //   queue.start();
+        //   queue.start();
     }
 
     private void postClick() throws UnsupportedEncodingException {
@@ -217,4 +219,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-}
+    }
+

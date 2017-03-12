@@ -70,14 +70,15 @@
         android:layout_alignParentStart="true" />
 
     <EditText
+        android:id="@+id/UserNewPostID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:layout_marginTop="19dp"
-        android:id="@+id/UserNewPostID"
-        android:layout_below="@+id/PostButtonID"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/PostButtonID"
+        android:layout_marginTop="19dp"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="textMultiLine" />
 
 </RelativeLayout>

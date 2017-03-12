@@ -11,6 +11,7 @@ public class PostAddedEvent {
     public ArrayList<Post> postsAddedList;
 
     public PostAddedEvent(ArrayList<Post> postsAddedList) {
+
         this.postsAddedList = postsAddedList;
     }
 }
