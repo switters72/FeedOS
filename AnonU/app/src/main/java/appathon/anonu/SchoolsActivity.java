@@ -25,10 +25,20 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class SchoolsActivity extends AppCompatActivity {
-    ArrayList<Button> buttonList  = new ArrayList<Button>();
+    private static ArrayList<Button> buttonList  = new ArrayList<Button>();
 
     private static RequestQueue queue = null;
     private static String confirmationToken;
+    private static String passedSchoolID;
+    private Button b1;
+    private Button b2;
+    private Button b3;
+    private Button b4;
+    private Button b5;
+    private Button b6;
+    private Button b7;
+    private Button b8;
+    private static ArrayList<School> schools;
 
 
     @Override
@@ -62,7 +72,7 @@ public class SchoolsActivity extends AppCompatActivity {
         historyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+              //  finish();
                 Intent historyIntent = new Intent(SchoolsActivity.this, HistoryActivity.class);
                 startActivity(historyIntent);
             }
@@ -77,30 +87,41 @@ public class SchoolsActivity extends AppCompatActivity {
             }
         });
 
-        /*
-        buttonList.add((Button)findViewById(R.id.btn1));
-        buttonList.add((Button)findViewById(R.id.btn2));
-        buttonList.add((Button)findViewById(R.id.btn3));
-        buttonList.add((Button)findViewById(R.id.btn4));
-        buttonList.add((Button)findViewById(R.id.btn5));
-        buttonList.add((Button)findViewById(R.id.btn6));
-        */
+        b1 = (Button)findViewById(R.id.btn1);
+        b2 = (Button)findViewById(R.id.btn2);
+        b3 = (Button)findViewById(R.id.btn3);
+        b4 = (Button)findViewById(R.id.btn4);
+        b5 = (Button)findViewById(R.id.btn5);
+        b6 = (Button)findViewById(R.id.btn6);
+        b7 = (Button)findViewById(R.id.btn7);
+        b8 = (Button)findViewById(R.id.btn8);
+     /*   buttonList.add(b1);
+        buttonList.add(b2);
+        buttonList.add(b3);
+        buttonList.add(b4);
+        buttonList.add(b5);
+        buttonList.add(b6);
+        buttonList.add(b7);
+        buttonList.add(b8); */
 
-        for (int i = 0; i < buttonList.size(); i++) {
-            final int current = i;
+/*
+            for(int i = 0; i < buttonList.size(); i++) {
+                passedSchoolID = schools.get(i).getId();
+                buttonList.get(i).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent dynamic = new Intent(SchoolsActivity.this, DynamicActivity.class);
+                        dynamic.putExtra("confirmation_token", confirmationToken);
+                        dynamic.putExtra("school_id", passedSchoolID);
+                        startActivity(dynamic);
 
-            buttonList.get(i).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-//                    buttonList.get(movCnt).setBackgroundResource(R.drawable.mov1n);
-//                    buttonList.get(current).setBackgroundResource(R.drawable.mov1o);
-//                    movCnt = current;
-                }
-            });
-        }
+                    }
+                });
+            }
+            */
     }
 
-    public static void loadSchools(Context context){
+    public void loadSchools(Context context){
         if( queue == null){
             queue = Volley.newRequestQueue(context);
         }
@@ -112,7 +133,7 @@ public class SchoolsActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         // Display the first 500 characters of the response string.
                         Log.d("BA", response);
-                        ArrayList<School> schools = new ArrayList<>();
+                        schools = new ArrayList<>();
                         try {
                                 JSONObject successjsonObject = new JSONObject(response);
                                 JSONArray jsonArray =  successjsonObject.getJSONArray("schools");
@@ -129,6 +150,30 @@ public class SchoolsActivity extends AppCompatActivity {
                             Log.d("BA", "HERE");
                         } catch (JSONException e) {
                             e.printStackTrace();
+                        }
+                        for(int i = 0; i < buttonList.size(); i++) {
+                          //  passedSchoolID = schools.get(i).getId();
+                            buttonList.get(i).setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+
+                                    Button b = (Button)v;
+                                    String str = b.getText().toString();
+                                    Intent dynamic = new Intent(SchoolsActivity.this, DynamicActivity.class);
+                                    for(int i = 0; i < schools.size(); i++) {
+                                        if(schools.get(i).getName().equals(str)) {
+                                            passedSchoolID = schools.get(i).getId();
+                                            dynamic.putExtra("dynamic_confirmation_token", confirmationToken);
+                                            dynamic.putExtra("dynamic_school_id", passedSchoolID);
+                                        }
+                                    }
+                                    //Intent dynamic = new Intent(SchoolsActivity.this, DynamicActivity.class);
+                                    //dynamic.putExtra("dynamic_confirmation_token", confirmationToken);
+                                    //dynamic.putExtra("dynamic_school_id", passedSchoolID);
+                                    startActivity(dynamic);
+
+                                }
+                            });
                         }
                     }
                 }, new Response.ErrorListener() {
@@ -152,16 +197,17 @@ public class SchoolsActivity extends AppCompatActivity {
 
         ArrayList<School> schoolsThatWereAdded = schoolAddedEvent.schoolsAddedList;
 
+        /*
+            b1 = (Button)findViewById(R.id.btn1);
+            b2 = (Button)findViewById(R.id.btn2);
+            b3 = (Button)findViewById(R.id.btn3);
+            b4 = (Button)findViewById(R.id.btn4);
+            b5 = (Button)findViewById(R.id.btn5);
+            b6 = (Button)findViewById(R.id.btn6);
+            b7 = (Button)findViewById(R.id.btn7);
+            b8 = (Button)findViewById(R.id.btn8);
 
-            Button b1 = (Button)findViewById(R.id.btn1);
-            Button b2 = (Button)findViewById(R.id.btn2);
-            Button b3 = (Button)findViewById(R.id.btn3);
-            Button b4 = (Button)findViewById(R.id.btn4);
-            Button b5 = (Button)findViewById(R.id.btn5);
-            Button b6 = (Button)findViewById(R.id.btn6);
-            Button b7 = (Button)findViewById(R.id.btn7);
-            Button b8 = (Button)findViewById(R.id.btn8);
-
+*/
             if(schoolsThatWereAdded.get(0) != null) {
                 b1.setText(schoolsThatWereAdded.get(0).getName());
                 buttonList.add(b1);

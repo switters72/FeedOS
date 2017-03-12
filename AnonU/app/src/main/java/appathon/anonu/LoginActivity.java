@@ -74,6 +74,7 @@ public class LoginActivity extends AppCompatActivity {
                                 Intent homeIntent = new Intent(LoginActivity.this, MainActivity.class);
                                 homeIntent.putExtra("confirmation_token", confirmationToken);
                                 startActivity(homeIntent);
+                                finish();
                             }
                             Log.d("BA", "HERE");
                         } catch (JSONException e) {

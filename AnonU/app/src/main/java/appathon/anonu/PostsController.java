@@ -32,8 +32,8 @@ public class PostsController {
         EventBus.getDefault().post(new PostRemovedEvent(postsArrayList));
     }
     public static void removePosts(int indexToRemove){
-        Post removedBuilding = postsArray.remove(indexToRemove);
-        removePostHelper(removedBuilding);
+        Post removedPost = postsArray.remove(indexToRemove);
+        removePostHelper(removedPost);
     }
     public static ArrayList<Post> getPosts() {
         return postsArray;

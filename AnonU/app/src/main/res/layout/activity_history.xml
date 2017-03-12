@@ -29,19 +29,6 @@
         android:layout_alignParentEnd="true"
         android:elevation="0dp" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/NewPostID">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
-
     <Button
         android:text="Home"
         android:layout_width="wrap_content"
@@ -50,5 +37,16 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <ListView
+        android:id="@+id/historyListview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/HistoryButtonID"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:divider="@android:drawable/bottom_bar"
+        android:dividerHeight="4dp" />
 
 </RelativeLayout>
